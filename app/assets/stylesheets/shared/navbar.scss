@@ -14,9 +14,10 @@
             cursor: pointer;
         }
     }
-    .logo {
+    .monogram {
         background-image: asset-url('logo.png');
         height: 70px;
+        width: 100%;
         max-width: 216px;
         margin: 0;
     }

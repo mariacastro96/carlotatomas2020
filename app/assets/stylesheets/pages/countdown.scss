@@ -6,17 +6,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  .logo {
+}
+
+.logo {
     background-image: asset-url('logo.png');
     background-size: cover;
     height: 100px;
     width: 80%;
     margin: 15% auto;
-  }
-  
-  li {
+}
+
+li {
     display: inline-block;
     font-size: 1.5em;
     font-weight: 100;
@@ -26,20 +26,23 @@
     color: #727972;
     text-shadow: 0px 0px 20px #C8CAC8;
     font-family: 'Raleway', sans-serif;
-  }
-  
-  li span {
+}
+
+li span {
     display: block;
     font-size: 4.5rem;
-  }
-  
-  /* general styling */
-  html, body {
+}
+
+
+/* general styling */
+
+html,
+body {
     height: 100%;
     margin: 0;
-  }
-  
-  body {
+}
+
+body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -47,19 +50,11 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-family: -apple-system, 
-      BlinkMacSystemFont, 
-      "Segoe UI", 
-      Roboto, 
-      Oxygen-Sans, 
-      Ubuntu, 
-      Cantarell, 
-      "Helvetica Neue", 
-      sans-serif;
-  }
-  
-  .container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.container {
     color: #333;
     margin: 0 auto;
     text-align: center;
-  }
+}
