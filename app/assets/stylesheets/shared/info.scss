@@ -1,0 +1,56 @@
+.main {
+    width: 60vw;
+    height: 100vh;
+    margin: auto;
+    margin-top: 70px;
+    padding-bottom: 30px;
+    p {
+        text-align: center;
+        color: #3B5173;
+        font-family: 'Raleway', sans-serif;
+    }
+    .maps-link {
+        text-decoration: none;
+        color: #3B5173;
+        font-family: 'Raleway', sans-serif;
+        cursor: pointer;
+        &:hover {
+            font-weight: 300;
+        }
+    }
+    .picture {
+        height: auto;
+        width: 60vw;
+        display: block;
+        margin: auto;
+        padding: 5%;
+    }
+    .poem {
+        font-weight: 100;
+        font-size: larger;
+        line-height: 160%;
+        letter-spacing: 3px;
+        // text-shadow: 0px 0px 35px #3B5173;
+    }
+    .subtitle {
+        font-weight: 200;
+        font-size: larger;
+        letter-spacing: 3px;
+    }
+    .title {
+        font-weight: 300;
+        font-size: x-large;
+        padding-top: 50px;
+        letter-spacing: 15px;
+        border-bottom: 1px solid #3B5173;
+        padding-bottom: 15px;
+        text-shadow: 0px 0px 35px #3B5173;
+    }
+    .extra-info {
+        font-weight: 100;
+        font-size: larger;
+        padding-top: 15px;
+        letter-spacing: 5px;
+        text-shadow: 0px 0px 35px #3B5173;
+    }
+}
