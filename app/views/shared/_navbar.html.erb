@@ -1,21 +1,21 @@
 <div class='navbar'>
-    <div class='button church item'>
+    <div class="button church <%= @name == 'missa' ? 'selected' : 'unselected' %>">
         <a href="/pages/missa">
             <p>MISSA</p>
         </a>    
     </div>
-    <div class='button party item'>
+    <div class="button party <%= @name == 'festa' ? 'selected' : 'unselected' %>">
         <a href="/pages/festa">
             <p>FESTA</p>
         </a>    
     </div>
     <a class="button monogram" href="/pages/homepage"></a>
-    <div class='button list item'>
+    <div class="button list <%= @name == 'lista' ? 'selected' : 'unselected' %>">
         <a href="#">
             <p>LISTA</p>
         </a>    
     </div>
-    <div class='button rsvp item'>
+    <div class="button rsvp unselected">
         <a href="#">
             <p>RSVP</p>
         </a>    

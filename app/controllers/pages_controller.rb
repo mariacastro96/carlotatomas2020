@@ -6,8 +6,12 @@ class PagesController < ApplicationController
   end
 
   def missa
+    __method__
+    # raise
+    @name = 'missa'
   end
 
   def festa
+    @name = 'festa'
   end
 end
