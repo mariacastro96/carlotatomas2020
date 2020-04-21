@@ -1,23 +1,30 @@
-<div class='navbar'>
-    <div class="button church <%= @name == 'missa' ? 'selected' : 'unselected' %>">
-        <a href="/pages/missa">
-            <p>MISSA</p>
+<div class='ct-navbar'>
+    <div class="ct-button <%= params[:action] == 'casamento' ? 'ct-selected' : 'ct-unselected' %>">
+        <a href='/pages/30-maio'>
+            <p class='ct-big'>30 de MAIO</p>
         </a>    
     </div>
-    <div class="button party <%= @name == 'festa' ? 'selected' : 'unselected' %>">
-        <a href="/pages/festa">
-            <p>FESTA</p>
+    <div class="ct-button <%= params[:action] == 'nos' ? 'ct-selected' : 'ct-unselected' %>">
+        <a href='/pages/nos'>
+            <p class='ct-small'>NÓS</p>
         </a>    
     </div>
-    <a class="button monogram" href="/pages/homepage"></a>
-    <div class="button list <%= @name == 'lista' ? 'selected' : 'unselected' %>">
+    <a class='ct-small-button' href="/pages/homepage">
+        <%= image_tag('logo.png', class: 'ct-monogram') %>
+    </a>
+    <div class="ct-button <%= params[:action] == 'lista' ? 'ct-selected' : 'ct-unselected' %>">
+        <a href='/pages/lista'>
+            <p class='ct-small'>LISTA</p>
+        </a>    
+    </div>
+    <div class="ct-button <%= params[:action] == 'festa' ? 'ct-selected' : 'ct-unselected' %>">
+        <a href='/pages/festa'>
+            <p class='ct-small'>FESTA</p>
+        </a>    
+    </div>
+    <%# <div class="ct-button unselected">
         <a href="#">
-            <p>LISTA</p>
+            <p class="ct-small">RSVP</p>
         </a>    
-    </div>
-    <div class="button rsvp unselected">
-        <a href="#">
-            <p>RSVP</p>
-        </a>    
-    </div>
+    </div> %>
 </div>

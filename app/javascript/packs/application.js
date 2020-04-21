@@ -15,5 +15,8 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-import { myfunc } from '../pages/countdown';
-myfunc();
+// import { myfunc } from '../pages/countdown';
+// myfunc();
+
+import { selectTranch } from '../gifts/offer_page';
+selectTranch();

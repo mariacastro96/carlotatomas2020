@@ -1,58 +1,73 @@
-.navbar {
+.ct-navbar {
     height: 70px;
     width: 100%;
     position: fixed;
     top: 0;
     box-shadow: 0px 0px 50px -15px #3B5173;
-    display: flex;
     align-items: center;
     justify-content: center;
     display: flex;
     background-color: white;
-    .selected {
-        width: 100%;
+    .ct-unselected {
+        .ct-big {
+            &:hover {
+                width: 50%;
+            }
+        }
+        .ct-small {
+            &:hover {
+                width: 25%;
+            }
+        }
         p {
-            font-size: larger;
-            font-family: 'Raleway', sans-serif;
-            text-shadow: 0px 0px 35px #3B5173;
-            color: #3B5173;
-            text-align: center;
-            border-bottom: 2px solid #3B5173;
+            font-weight: 300;
+            &:hover {
+                border-bottom: 2px solid #3B5173;
+                width: 50%;
+                margin: auto;
+                font-weight: 600;
+            }
+        }
+    }
+    .ct-selected {
+        .ct-big {
+            width: 50%;
+        }
+        .ct-small {
             width: 25%;
+        }
+        p {
+            border-bottom: 2px solid #3B5173;
+            width: 50%;
             margin: auto;
             font-weight: 800;
         }
     }
-    .button {
+    .ct-button {
+        width: 100%;
+        p {
+            font-size: large;
+            font-family: 'Raleway', sans-serif;
+            color: #3B5173;
+            margin: auto;
+            text-align: center;
+        }
         &:hover {
             cursor: pointer;
         }
     }
-    .monogram {
-        background-image: asset-url('logo.png');
+    .ct-small-button {
         height: 70px;
         width: 100%;
-        max-width: 216px;
+        max-width: 130px;
+    }
+    .ct-monogram {
+        height: 70px;
+        width: 100%;
+        max-width: 130px;
         margin: 0;
     }
     a {
         text-decoration: none;
-    }
-    .unselected {
-        width: 100%;
-        p {
-            text-align: center;
-            font-weight: 300;
-            color: #3B5173;
-            font-size: larger;
-            font-family: 'Raleway', sans-serif;
-            text-shadow: 0px 0px 35px #3B5173;
-            &:hover {
-                border-bottom: 2px solid #3B5173;
-                width: 25%;
-                margin: auto;
-                font-weight: 800;
-            }
-        }
     }
 }

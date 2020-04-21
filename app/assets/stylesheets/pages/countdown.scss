@@ -1,15 +1,11 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-// @import "lesshat";
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.logo {
-    background-image: asset-url('logo.png');
+.ct-logo {
+    background-image: asset-url('logo.ct-png');
     background-size: cover;
     height: 100px;
     width: 80%;
@@ -53,7 +49,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-.container {
+.ct-container {
     color: #333;
     margin: 0 auto;
     text-align: center;

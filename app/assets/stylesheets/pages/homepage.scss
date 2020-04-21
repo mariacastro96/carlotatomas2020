@@ -1,4 +1,4 @@
-.main {
+.ct-main {
     width: 60vw;
     height: 100vh;
     margin: auto;
@@ -9,25 +9,25 @@
         color: #3B5173;
         font-family: 'Raleway', sans-serif;
     }
-    .picture {
+    .ct-picture {
         height: auto;
         width: 60vw;
         display: block;
         margin: auto;
     }
-    .poem {
+    .ct-poem {
         font-weight: 100;
         font-size: larger;
         line-height: 160%;
         letter-spacing: 3px;
         // text-shadow: 0px 0px 35px #3B5173;
     }
-    .subtitle {
+    .ct-subtitle {
         font-weight: 200;
         font-size: larger;
         letter-spacing: 3px;
     }
-    .title {
+    .ct-title {
         font-weight: 300;
         font-size: x-large;
         padding-top: 50px;
@@ -36,11 +36,21 @@
         padding-bottom: 15px;
         text-shadow: 0px 0px 35px #3B5173;
     }
-    .extra-info {
+    .ct-extra-info {
         font-weight: 100;
         font-size: larger;
         padding-top: 15px;
         letter-spacing: 5px;
         text-shadow: 0px 0px 35px #3B5173;
+    }
+    .ct-list-intro {
+        display: flex;
+        align-content: space-between;
+    }
+    .ct-list-picture {
+        height: auto;
+        width: 30vw;
+        display: block;
+        margin: auto;
     }
 }

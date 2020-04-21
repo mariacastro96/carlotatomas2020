@@ -1,0 +1,44 @@
+<html>
+  <body>
+    <div class='ct-gift'>
+      <div class='ct-intro'>
+        <div class='ct-title'>
+          <p>
+            <%= @gift.name %>
+          </p>
+        </div>
+        <div class='ct-extra-info'>
+          <p>
+            <%= "#{@gift.offered_value.to_i}/#{@gift.total_value.to_i} €" %>
+          </p>
+        </div>
+      </div>
+      <div class='ct-content'>
+        <%= image_tag("list/#{@gift.code_name}.png", class: 'ct-picture') %>
+        <div class='ct-form'>
+          <%= simple_form_for @transaction, url: gift_transactions_path(@gift.id), method: :post do |f| %>
+            <%= f.input :name, label: 'nome' %>
+            <div class='ct-tranches row', value="<% @tranches_left %>">
+              <% n = 1 %>
+              <% @tranches_left.times do %>
+                <div class='col-4'>
+                  <div class='ct-tranche', id="tranch<%= n %>", value='<%= @gift.tranch_value %>'>
+                    <%= @gift.tranch_value %>€
+                    <% n += 1 %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+            <%= f.input :offered_value, readonly: true, label: 'valor', hint: 'Selecione uma ou mais tranches' %>
+            <%= f.input :message, label: 'mensagem' %>
+            <%= f.hidden_field :gift_id, value: @gift.id %>
+            <div class='ct-buttons'>
+              <%= f.button :submit, value: 'CONFIRMAR' %>
+              <%= link_to "VOLTAR", pages_lista_path(lista: 'casa_nova', anchor: 'casa-nova'), class: 'ct-button' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

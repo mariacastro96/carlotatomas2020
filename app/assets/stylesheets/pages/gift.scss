@@ -1,0 +1,120 @@
+.ct-gift {
+    width: 60vw;
+    height: 100vh;
+    margin: auto;
+    margin-top: 70px;
+    padding-bottom: 30px;
+    a {
+        text-decoration: none;
+    }
+    p {
+        text-align: center;
+        color: #3B5173;
+        font-family: 'Raleway', sans-serif;
+    }
+    .ct-intro {
+        .ct-title {
+            font-weight: 300;
+            font-size: x-large;
+            padding-top: 50px;
+            letter-spacing: 15px;
+            border-bottom: 1px solid #3B5173;
+            padding-bottom: 15px;
+            text-shadow: 0px 0px 35px #3B5173;
+        }
+        .ct-extra-info {
+            font-weight: 100;
+            font-size: larger;
+            padding-top: 15px;
+            letter-spacing: 5px;
+            text-shadow: 0px 0px 35px #3B5173;
+        }
+    }
+    .ct-content {
+        width: 100%;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+        .ct-picture {
+            display: block;
+            width: 40%;
+        }
+        .ct-form {
+            width: 40%;
+            label {
+                color: #3B5173;
+                font-family: 'Raleway', sans-serif;
+                margin: 0;
+            }
+            small {
+                font-family: 'Raleway', sans-serif;
+                font-weight: 100;
+            }
+            input {
+                background-color: white;
+                border: 1px solid #D8DCE3;
+                color: #3B5173;
+                font-family: 'Raleway', sans-serif;
+            }
+            textarea {
+                background-color: white;
+                border: 1px solid #D8DCE3;
+                color: #3B5173;
+                font-family: 'Raleway', sans-serif;
+            }
+            a {
+                text-decoration: none;
+            }
+            .ct-tranches {
+                display: flex;
+                align-content: space-between;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                .ct-tranche {
+                    width: 100%;
+                    padding: 10px 0;
+                    border: 1px solid #D8DCE3;
+                    color: #3B5173;
+                    font-family: 'Raleway', sans-serif;
+                    border-radius: 0.25rem;
+                    text-align: center;
+                    margin: 5% 0;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #D8DCE3;
+                    }
+                }
+                .selected {
+                    background-color: #D8DCE3;
+                }
+            }
+            .ct-buttons {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                input {
+                    width: 100%;
+                    margin-right: 5px;
+                    &:hover {
+                        background-color: #D8DCE3;
+                    }
+                }
+                .ct-button {
+                    width: 100%;
+                    margin-left: 5px;
+                    border: 1px solid #D8DCE3;
+                    color: #3B5173;
+                    font-family: 'Raleway', sans-serif;
+                    padding: 0.375rem 0.75rem;
+                    border-radius: 0.25rem;
+                    text-align: center;
+                    &:hover {
+                        background-color: #D8DCE3;
+                    }
+                }
+            }
+        }
+    }
+}
