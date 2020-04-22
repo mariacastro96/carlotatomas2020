@@ -35,13 +35,29 @@
         display: flex;
         align-content: center;
         align-items: center;
-        justify-content: space-between;
-        .ct-picture {
-            display: block;
-            width: 40%;
+        justify-content: center;
+        padding-top: 50px;
+        p {
+            font-weight: 100;
+            font-size: larger;
+            line-height: 160%;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+        .ct-img {
+            width: 100%;
+            .ct-picture {
+                display: block;
+                width: 80%;
+                height: auto;
+                margin: auto;
+            }
+        }
+        .ct-info {
+            width: 100%;
         }
         .ct-form {
-            width: 40%;
+            width: 100%;
             label {
                 color: #3B5173;
                 font-family: 'Raleway', sans-serif;
@@ -116,5 +132,26 @@
                 }
             }
         }
+    }
+    .ct-bank-info {
+        margin: 40px 0;
+        width: 100%;
+        border: 1px solid #D8DCE3;
+        border-radius: 0.25rem;
+        padding: 10px 0;
+        p {
+            font-weight: 100;
+            font-size: small;
+            line-height: 160%;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+        .ct-bank-accnt {
+            font-weight: 300;
+        }
+    }
+    .row {
+        width: 100%;
+        margin: 0
     }
 }

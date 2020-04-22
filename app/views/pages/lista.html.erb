@@ -12,7 +12,7 @@
           <%= link_to pages_lista_path(lista: 'casa_nova', :anchor => 'casa-nova') do %>
             <%= image_tag("casa_nova#{'_selected' if @kind == 'casa_nova'}.png", class: 'ct-picture') %>
           <% end %>
-          <%= link_to pages_lista_path(lista: 'lua_de_mel') do %>
+          <%= link_to gift_path('Lua de Mel') do %>
             <%= image_tag("lua_de_mel#{'_selected' if @kind == 'lua_de_mel'}.png", class: 'ct-picture') %>
           <% end %>
         </div>

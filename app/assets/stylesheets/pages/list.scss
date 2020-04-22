@@ -31,6 +31,9 @@
         }
         .ct-main-pictures {
             display: flex;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
             width: 100%;
             margin: 10% 0;
             .ct-picture {
@@ -56,6 +59,12 @@
             align-items: center;
             justify-content: center;
             padding-top: 20px;
+            p {
+                font-size: small;
+                font-weight: 200;
+                // width: 100%;
+                margin: 0;
+            }
             .ct-category {
                 width: 100%;
                 margin: 3% 1%;
@@ -68,16 +77,16 @@
                 cursor: pointer;
                 &:hover {
                     background-color: #D8DCE3;
+                    p {
+                        font-weight: 500;
+                    }
                 }
             }
             .ct-selected {
                 background-color: #D8DCE3;
-            }
-            p {
-                font-size: small;
-                font-weight: 200;
-                // width: 100%;
-                margin: 0;
+                p {
+                    font-weight: 500;
+                }
             }
         }
         .ct-gifts {
@@ -123,6 +132,15 @@
                     }
                 }
             }
+            .ct-offered {
+                p {
+                    font-weight: 300 !important;
+                    letter-spacing: 10px !important;
+                }
+                &:hover {
+                    background-color: #CC898D;
+                }
+            }
         }
     }
     .ct-poem {
@@ -146,5 +164,9 @@
         width: 30vw;
         display: block;
         margin: auto;
+    }
+    .row {
+        width: 100%;
+        margin: 0
     }
 }
