@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: 0
+  name: MyString
+  total_value: 1.5
+  number_of_tranches: 1
+  tranch_value: 1.5
+  offered_tranches: 1
+  offered_value: 1.5
+  missing_value: 1.5
+
+two:
+  category: 1
+  name: MyString
+  total_value: 1.5
+  number_of_tranches: 1
+  tranch_value: 1.5
+  offered_tranches: 1
+  offered_value: 1.5
+  missing_value: 1.5

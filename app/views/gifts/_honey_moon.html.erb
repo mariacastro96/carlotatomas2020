@@ -1,0 +1,50 @@
+<div class='ct-intro'>
+  <div class='ct-title'>
+    <p>
+      <%= @gift.name %>
+    </p>
+  </div>
+</div>
+<div class='ct-content'>
+  <div class='row'>
+    <div class='col-xs-12 col-md-6'>
+      <div class='ct-info'>
+        <p>
+          <span class='ct-subtitle'>A nossa lua de mel</span><br/>
+          <br/>
+          O dia mais aguardado <br/>
+          Está finalmente a chegar<br/>
+          Primeiro veio o noivado<br/>
+          Agora falta casar<br/>
+          <br/><br/>
+        </p>
+      </div>
+    </div>
+    <div class='col-xs-12 col-md-6'>
+      <div class='ct-form'>
+        <%= simple_form_for @transaction, url: gift_transactions_path(@gift.id), method: :post do |f| %>
+          <%= f.input :name, label: 'nome' %>
+          <%= f.input :offered_value, label: 'valor', hint: 'Insira o valor que quer oferecer, em Euros' %>
+          <%= f.input :message, label: 'mensagem' %>
+          <%= f.hidden_field :gift_id, value: @gift.id %>
+          <div class='ct-buttons'>
+            <%= f.button :submit, value: 'CONFIRMAR' %>
+            <%= link_to "VOLTAR", pages_lista_path, class: 'ct-button' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='ct-bank-info'>
+  <p>
+    <span class='ct-subtitle'>Obrigado por contribuir para a nossa lua de mel!</span><br/>
+    <br/>
+    Para finalizar, pedimos que transfira o valor que deseja contribuir para:<br/>
+    <span class='ct-bank-accnt'>IBAN: PT50 0023 0000 45573069621 94</span><br/>
+    <span class='ct-bank-accnt'>MBWAY: 939026008</span><br/>
+    <br/>
+    Para podermos agradecer, pedimos que preencha o formulário<br/>
+    e indique que contribuiu para a lua de mel na descrição da transferência Bancária
+  </p>
+</div>

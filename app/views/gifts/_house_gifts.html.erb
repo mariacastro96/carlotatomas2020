@@ -1,0 +1,58 @@
+<div class='ct-intro'>
+  <div class='ct-title'>
+    <p>
+      <%= @gift.name %>
+    </p>
+  </div>
+  <div class='ct-extra-info'>
+    <p>
+      <%= "#{@gift.offered_value.to_i}/#{@gift.total_value.to_i} €" %>
+    </p>
+  </div>
+</div>
+<div class='ct-content'>
+  <div class='row'>
+    <div class='col-xs-12 col-md-6'>
+      <div class='ct-img '>
+        <%= image_tag("list/#{@gift.code_name}.png", class: 'ct-picture') %>
+      </div>
+    </div>
+    <div class='col-xs-12 col-md-6'>
+      <div class='ct-form col-xs-12 col-md-6'>
+        <%= simple_form_for @transaction, url: gift_transactions_path(@gift.id), method: :post do |f| %>
+          <%= f.input :name, label: 'nome' %>
+          <div class='ct-tranches', value="<% @tranches_left %>">
+            <div class='row'>
+              <% @tranches_left.times do %>
+                <div class='col-xs-3 col-md-4'>
+                  <div class='ct-tranche', value='<%= @gift.tranch_value %>'>
+                    <%= @gift.tranch_value %>€
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <%= f.input :offered_value, readonly: true, label: 'valor', hint: 'Selecione um ou mais tranches' %>
+          <%= f.input :message, label: 'mensagem' %>
+          <%= f.hidden_field :gift_id, value: @gift.id %>
+          <div class='ct-buttons'>
+            <%= f.button :submit, value: 'CONFIRMAR' %>
+            <%= link_to "VOLTAR", pages_lista_path(lista: 'casa_nova', anchor: 'casa-nova'), class: 'ct-button' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='ct-bank-info'>
+  <p>
+    <span class='ct-subtitle'>Obrigado por nos querer oferecer este presente!</span><br/>
+    <br/>
+    Para finalizar, pedimos que transfira o valor que deseja contribuir para:<br/>
+    <span class='ct-bank-accnt'>IBAN: PT50 0023 0000 45573069621 94</span><br/>
+    <span class='ct-bank-accnt'>MBWAY: 939026008</span><br/>
+    <br/>
+    Para podermos agradecer, pedimos que nos diga qual foi o presente que ofereceu<br/>
+    preenchendo o formulário e indicando na descrição da transferência Bancária
+  </p>
+</div>
