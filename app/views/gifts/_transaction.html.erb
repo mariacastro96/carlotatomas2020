@@ -10,7 +10,7 @@
       <p><%= transaction.message %></p>
     </div>
     <div class='ct-hide'>
-      <%= link_to 'Esconder',  transaction_path(Transaction.last.id),  method: :delete, data: { confirm: 'Are you sure?' }, class: 'ct-card-button' %>
+      <%= link_to 'Esconder',  transaction_path(Transaction.last.id, transaction: { hidden: true } ),  method: :patch, data: { confirm: 'Are you sure?' }, class: 'ct-card-button' %>
     </div>
   </div>
 </div>

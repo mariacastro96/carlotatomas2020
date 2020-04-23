@@ -13,6 +13,8 @@
     <p><b>Para este presente faltam:</b> <%= @gift.missing_value %>€</p>
     <p><b>Mensagem</b> <%= @transaction.message %></p>
     <br/><br/>
-    <p><b>Link para todos os presentes e transações:</b> carlotatomas2020.com/gifts </p>
+    <p><b>Link para todos os presentes e transações:</b> <%= link_to 'Some link',  Rails.configuration.action_mailer.default_url_options[:host] + '/gifts' %> </p>
   </body>
 </html>
+
+

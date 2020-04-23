@@ -20,9 +20,9 @@ class TransactionsController < ApplicationController
     end
   end
 
-  def destroy
-    @transaction = Transaction.find_by(id: params[:id])
-    @transaction.update_attributes(hidden: true)
+  def update
+    @transaction = Transaction.find(params[:id])
+    @transaction.update_attributes(update_transaction_params)
 
     gift = @transaction.gift
     offered_value = @transaction.offered_value
@@ -42,5 +42,9 @@ class TransactionsController < ApplicationController
 
   def transaction_params
     params.require(:transaction).permit(:name, :message, :offered_value, :gift_id)
+  end
+
+  def update_transaction_params
+    params.require(:transaction).permit(:hidden)
   end
 end

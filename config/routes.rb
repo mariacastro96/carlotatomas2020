@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :gifts, only: [:index, :show] do
     resources :transactions, only: [:index,  :create]
   end
-  resources :transactions, only: :destroy
+  resources :transactions, only: :update
   root to: 'pages#homepage'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
