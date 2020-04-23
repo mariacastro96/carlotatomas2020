@@ -20,14 +20,12 @@
             letter-spacing: 15px;
             border-bottom: 1px solid #3B5173;
             padding-bottom: 15px;
-            text-shadow: 0px 0px 35px #3B5173;
         }
         .ct-extra-info {
             font-weight: 300;
             font-size: larger;
             padding-top: 15px;
             letter-spacing: 5px;
-            text-shadow: 0px 0px 35px #3B5173;
         }
     }
     .ct-content {
@@ -62,10 +60,13 @@
                 color: #3B5173;
                 font-family: 'Raleway', sans-serif;
                 margin: 0;
+                font-size: medium;
+                font-weight: 300;
             }
             small {
                 font-family: 'Raleway', sans-serif;
                 font-weight: 300;
+                font-size: small;
             }
             input {
                 background-color: white;
@@ -144,13 +145,13 @@
         padding: 10px 0;
         p {
             font-weight: 300;
-            font-size: small;
+            font-size: medium;
             line-height: 160%;
             letter-spacing: 3px;
             margin: 0;
         }
         .ct-bank-accnt {
-            font-weight: 300;
+            font-weight: 500;
         }
     }
     .row {
@@ -173,6 +174,10 @@
         color: #3B5173;
         font-family: 'Raleway', sans-serif;
     }
+    .row {
+        width: 100%;
+        margin: 0
+    }
     .ct-title {
         font-weight: 300;
         font-size: x-large;
@@ -180,7 +185,6 @@
         letter-spacing: 15px;
         border-bottom: 1px solid #3B5173;
         padding-bottom: 15px;
-        text-shadow: 0px 0px 35px #3B5173;
     }
     .ct-transactions {
         width: 100%;
