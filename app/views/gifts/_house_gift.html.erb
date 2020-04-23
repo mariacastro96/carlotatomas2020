@@ -36,7 +36,7 @@
           <%= f.input :message, label: 'mensagem' %>
           <%= f.hidden_field :gift_id, value: @gift.id %>
           <div class='ct-buttons'>
-            <%= f.button :submit, value: 'CONFIRMAR' %>
+            <%= f.button :submit, value: 'CONFIRMAR', id: 'ct-submit-btn'%>
             <%= link_to "VOLTAR", pages_lista_path(lista: 'casa_nova', anchor: 'casa-nova'), class: 'ct-button' %>
           </div>
         <% end %>

@@ -1,5 +1,5 @@
 <div class='ct-title' id='casa-nova'>
-  <p>CASA NOVA</p>
+  <p>CASA</p>
 </div>
 
 <div class='ct-categories'>
@@ -50,7 +50,7 @@
       </div>
     <% else %>
       <div class='col-sm-12 col-md-6'>
-        <%= link_to gift_path(gift.name), class: 'ct-card' do %>
+        <%= link_to gift_path(gift.id), class: 'ct-card' do %>
           <%= image_tag("list/#{gift.code_name}.png", class: 'ct-picture') %>
           <div class='ct-info'>
             <p><%= "#{gift.name}  |  #{gift.offered_value.to_i}/#{gift.total_value.to_i} €" %></p>

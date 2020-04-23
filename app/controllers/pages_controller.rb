@@ -20,7 +20,6 @@ class PagesController < ApplicationController
     @kind = params[:lista]
     @category = params[:categoria]
     @gifts = Gift.where(category: @category).order(id: :asc)
-    
-    # raise
+    @honey_moon = Gift.find_by(category: 6)
   end
 end

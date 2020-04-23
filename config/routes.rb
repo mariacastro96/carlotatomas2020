@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   get 'pages/30-maio', to: 'pages#casamento'
   get 'pages/nos', to: 'pages#nos'
   get 'pages/lista', to: 'pages#lista'
-  resources :gifts, only: [:show] do
-    resources :transactions, only: [:create]
+  resources :gifts, only: [:index, :show] do
+    resources :transactions, only: [:index,  :create]
   end
-  root to: 'pages#countdown'
+  resources :transactions, only: :destroy
+  root to: 'pages#homepage'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

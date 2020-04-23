@@ -1,0 +1,32 @@
+<html>
+  <body>
+    <div class='ct-all-gifts row'>
+      <div class='ct-honey-moon'>
+        <div class='ct-title'>
+          <p>LUA DE MEL</p>
+        </div>
+        <div class='ct-transactions row'>
+          <% @honey_moon.transactions.active.each do |transaction| %>
+            <%= render partial: 'transaction', locals: { transaction: transaction } %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class='ct-house-gifts'>
+        <div class='ct-title'>
+          <p>CASA</p>
+        </div>
+          <div class='ct-gifts'>
+            <% @house_gifts.each do |gift| %>
+              <%= render partial: 'gift', locals: { gift: gift } %>
+              <div class='ct-transactions row'>
+                <% gift.transactions.active.each do |transaction| %>
+                  <%= render partial: 'transaction', locals: { transaction: transaction } %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

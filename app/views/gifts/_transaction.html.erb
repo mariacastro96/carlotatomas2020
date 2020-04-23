@@ -1,0 +1,16 @@
+<div class='col-md-6'>
+  <div class='ct-transaction-card'>
+    <div class='ct-name ct-card-field'>
+      <p><%= transaction.name %></p>
+    </div>
+    <div class='ct-value ct-card-field'>
+      <p><%= transaction.offered_value %> €</p>
+    </div>
+    <div class='ct-message ct-card-field'>
+      <p><%= transaction.message %></p>
+    </div>
+    <div class='ct-hide'>
+      <%= link_to 'Esconder',  transaction_path(Transaction.last.id),  method: :delete, data: { confirm: 'Are you sure?' }, class: 'ct-card-button' %>
+    </div>
+  </div>
+</div>

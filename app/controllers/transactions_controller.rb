@@ -10,17 +10,32 @@ class TransactionsController < ApplicationController
         new_value = gift.offered_value + offered_value
         gift.update_attributes(offered_value: new_value)
       else
-        total_value = gift.total_value
-        missing_value = total_value - offered_value
-        tranches = gift.offered_tranches + (offered_value / gift.tranch_value)
+        missing_value = gift.missing_value - offered_value
+        tranches = gift.offered_tranches + (offered_value / gift.tranch_value).to_i
         gift.update_attributes(offered_value: gift.offered_value + offered_value, offered_tranches: tranches.to_i, missing_value: missing_value)
       end
-
       redirect_to root_path
     else
-      flash[:error] =  'NOOO'
       redirect_to gift_path(Gift.find(params[:gift_id]).name)
     end
+  end
+
+  def destroy
+    @transaction = Transaction.find_by(id: params[:id])
+    @transaction.update_attributes(hidden: true)
+
+    gift = @transaction.gift
+    offered_value = @transaction.offered_value
+
+    if gift.honey_moon?
+      new_value = gift.offered_value + offered_value
+      gift.update_attributes(offered_value: new_value)
+    else
+      missing_value = gift.missing_value + offered_value
+      tranches = gift.offered_tranches - (offered_value / gift.tranch_value).to_i
+      gift.update_attributes(offered_value: gift.offered_value - offered_value, offered_tranches: tranches.to_i, missing_value: missing_value)
+    end
+    redirect_back(fallback_location: gifts_path)
   end
 
   private

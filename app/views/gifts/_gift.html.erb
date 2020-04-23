@@ -1,0 +1,18 @@
+<% if gift.offered? %> 
+  <div class='ct-card ct-offered'>
+    <%= image_tag("list/#{gift.code_name}.png", class: 'ct-picture') %>
+    <div class='ct-info'>
+      <p>OFERECIDO</p>
+    </div>
+  </div>
+<% else %>
+  <%= link_to gift_path(gift.id), class: 'ct-card' do %>
+    <%= image_tag("list/#{gift.code_name}.png", class: 'ct-picture') %>
+    <div class='ct-info'>
+      <p><%= "#{gift.name}  |  #{gift.offered_value.to_i}/#{gift.total_value.to_i} €" %></p>
+    </div>
+    <div class='ct-info'>
+      <p><%= "#{gift.missing_value} €" %></p>
+    </div>
+  <% end %>
+<% end %>
