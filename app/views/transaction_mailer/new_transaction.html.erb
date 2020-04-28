@@ -9,8 +9,10 @@
     <p><b>Categoria:</b> <%= @gift.category %></p>
     <p><b>Nome:</b> <%= @gift.name %></p>
     <p><b>Valor oferecido:</b> <%= @transaction.offered_value %> €</p>
-     <br/>
-    <p><b>Para este presente faltam:</b> <%= @gift.missing_value %>€</p>
+    <br/>
+    <% unless @gift.honey_moon? %>
+      <p><b>Para este presente faltam:</b> <%= @gift.missing_value %>€</p>
+    <% end %>
     <p><b>Mensagem</b> <%= @transaction.message %></p>
     <br/><br/>
     <p><b>Link para todos os presentes e transações:</b> <%= link_to 'Some link',  Rails.configuration.action_mailer.default_url_options[:host] + '/gifts' if Rails.env == 'production' %> </p>

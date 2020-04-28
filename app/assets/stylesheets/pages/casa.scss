@@ -1,0 +1,128 @@
+.ct-casa {
+    width: 60vw;
+    height: 100vh;
+    margin: auto;
+    margin-top: 70px;
+    padding-bottom: 30px;
+    a {
+        text-decoration: none;
+    }
+    p {
+        text-align: center;
+        color: #3B5173;
+        font-family: 'Raleway', sans-serif;
+    }
+    .ct-content {
+        .ct-title {
+            padding-top: 50px;
+            font-weight: 300;
+            font-size: x-large;
+            letter-spacing: 15px;
+            border-bottom: 1px solid #3B5173;
+            padding-bottom: 15px;
+        }
+        .ct-intro {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            .ct-text {
+                width: 100%;
+                text-align: center;
+                color: #3B5173;
+                font-weight: 300;
+                font-size: medium;
+                font-family: 'Raleway', sans-serif;
+            }
+            .ct-categories {
+                width: 100%;
+                padding-top: 20px;
+                padding-left: 20px;
+                p {
+                    font-size: small;
+                    font-weight: 300;
+                    margin: 0;
+                }
+                .ct-category {
+                    width: 100%;
+                    margin: 3% 1%;
+                    padding: 10px 0;
+                    border: 1px solid #3B5173;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #D8DCE3;
+                        p {
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .ct-selected {
+                    background-color: #D8DCE3;
+                    p {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        .ct-gifts {
+            width: 100%;
+            padding: 5% 0;
+            margin: auto;
+            .ct-card {
+                width: 100%;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #C4C8C5;
+                margin: 20px 0;
+                &:hover {
+                    background-color: #ADB6C4;
+                    p {
+                        font-weight: 300 !important;
+                    }
+                }
+                .ct-picture {
+                    display: block;
+                    width: 100%;
+                }
+                .ct-info {
+                    background-color: white;
+                    width: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 10px;
+                    padding: 10px 0;
+                    p {
+                        text-align: center;
+                        color: #3B5173;
+                        font-family: 'Raleway', sans-serif;
+                        font-size: medium;
+                        font-weight: 300;
+                        width: 100%;
+                        letter-spacing: 3px;
+                        margin: 0;
+                    }
+                }
+            }
+            .ct-offered {
+                p {
+                    font-weight: 300 !important;
+                    letter-spacing: 10px !important;
+                }
+                &:hover {
+                    background-color: #CC898D;
+                }
+            }
+        }
+    }
+    .row {
+        width: 100%;
+        margin: 0
+    }
+}

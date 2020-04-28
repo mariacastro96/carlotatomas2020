@@ -11,4 +11,11 @@ class GiftsController < ApplicationController
     @honey_moon = Gift.find_by(category: 6)
     @house_gifts = Gift.where.not(category: 6).order(id: :asc)
   end
+
+  def casa
+    @kind = params[:lista]
+    @category = params[:categoria]
+    @gifts = Gift.where(category: @category).order(id: :asc)
+    @honey_moon = Gift.find_by(category: 6)
+  end
 end

@@ -44,10 +44,23 @@
         border-bottom: 1px solid #3B5173;
         padding-bottom: 15px;
     }
+    .ct-small {
+        width: 50%;
+        margin: auto;
+    }
     .ct-extra-info {
         font-weight: 300;
         font-size: larger;
         padding-top: 15px;
         letter-spacing: 5px;
+        .ct-heavy {
+            font-weight: 800;
+        }
+    }
+    .ct-text {
+        padding: 30px;
+        p {
+            text-align: justify;
+        }
     }
 }

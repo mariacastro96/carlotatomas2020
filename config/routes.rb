@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'pages/30-maio', to: 'pages#casamento'
   get 'pages/nos', to: 'pages#nos'
   get 'pages/lista', to: 'pages#lista'
+  get 'pages/casa', to: 'gifts#casa'
   resources :gifts, only: [:index, :show] do
     resources :transactions, only: [:index,  :create]
   end

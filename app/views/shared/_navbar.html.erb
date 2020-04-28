@@ -4,11 +4,12 @@
             <p class='ct-big'>30 de MAIO</p>
         </a>    
     </div>
-    <div class="ct-button <%= params[:action] == 'nos' ? 'ct-selected' : 'ct-unselected' %>">
-        <a href='/pages/nos'>
-            <p class='ct-small'>NÓS</p>
+    <div class="ct-button <%= params[:action] == 'festa' ? 'ct-selected' : 'ct-unselected' %>">
+        <a href='/pages/festa'>
+            <p class='ct-bigger'>30 de NOVEMBRO - FESTA</p>
         </a>    
     </div>
+    
     <a class='ct-small-button' href="/pages/homepage">
         <%= image_tag('logo.png', class: 'ct-monogram') %>
     </a>
@@ -17,11 +18,12 @@
             <p class='ct-small'>LISTA</p>
         </a>    
     </div>
-    <div class="ct-button <%= params[:action] == 'festa' ? 'ct-selected' : 'ct-unselected' %>">
-        <a href='/pages/festa'>
-            <p class='ct-small'>FESTA</p>
+    <div class="ct-button <%= params[:action] == 'nos' ? 'ct-selected' : 'ct-unselected' %>">
+        <a href='/pages/nos'>
+            <p class='ct-big'>SOBRE NÓS</p>
         </a>    
     </div>
+    
     <%# <div class="ct-button unselected">
         <a href="#">
             <p class="ct-small">RSVP</p>

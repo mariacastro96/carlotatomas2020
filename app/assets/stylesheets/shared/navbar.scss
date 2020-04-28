@@ -15,6 +15,11 @@
                 width: 50%;
             }
         }
+        .ct-bigger {
+            &:hover {
+                width: 90%;
+            }
+        }
         .ct-small {
             &:hover {
                 width: 25%;
@@ -33,6 +38,9 @@
     .ct-selected {
         .ct-big {
             width: 50%;
+        }
+        .ct-bigger {
+            width: 90%;
         }
         .ct-small {
             width: 25%;
@@ -61,12 +69,12 @@
         height: 70px;
         width: 100%;
         max-width: 130px;
-    }
-    .ct-monogram {
-        height: 70px;
-        width: 100%;
-        max-width: 130px;
-        margin: 0;
+        display: flex;
+        align-items: center;
+        .ct-monogram {
+            width: 100%;
+            margin: 0;
+        }
     }
     a {
         text-decoration: none;

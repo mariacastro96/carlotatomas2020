@@ -6,19 +6,33 @@
           <p>LISTA</p>
         </div>
         <div class='ct-extra-info'>
-          <p>CASA | LUA DE MEL</p>
+          <p>
+            Para quem quiser oferecer-nos um presente 
+            – são muito queridos – em baixo têm a lista 
+            para a nossa casa (não temos nada portanto 
+            há tudo para oferecer!) e a lua de mel, que 
+            embora só a possamos fazer mais tarde, queremos 
+            muito que aconteça.
+          </p>
         </div>
         <div class='ct-main-pictures'>
-          <%= link_to pages_lista_path(lista: 'casa_nova', :anchor => 'casa-nova') do %>
-            <%= image_tag("casa_nova#{'_selected' if @kind == 'casa_nova'}.png", class: 'ct-picture') %>
-          <% end %>
-          <%= link_to gift_path(@honey_moon.id) do %>
-            <%= image_tag("lua_de_mel#{'_selected' if @kind == 'lua_de_mel'}.png", class: 'ct-picture') %>
-          <% end %>
+          <div class='ct-picture-title'>
+            <p>
+              CASA
+            </p>
+            <%= link_to pages_casa_path do %>
+              <%= image_tag("casa_nova.png", class: 'ct-picture') %>
+            <% end %>
+          </div>
+          <div class='ct-picture-title'>
+            <p>
+              LUA DE MEL
+            </p>
+            <%= link_to gift_path(@honey_moon.id) do %>
+              <%= image_tag("lua_de_mel.png", class: 'ct-picture') %>
+            <% end %>
+          </div>
         </div>
-      </div>
-      <div class='ct-content'>
-        <%= render 'casa_nova' if @kind == 'casa_nova' %>
       </div>
     </div>
   </body>

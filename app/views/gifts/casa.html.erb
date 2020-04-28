@@ -1,0 +1,87 @@
+<html>
+  <body>
+    <div class='ct-casa'>
+      <div class='ct-content'>
+        <div class='ct-title' id='casa-nova'>
+          <p>CASA</p>
+        </div>
+
+        <div class='ct-intro'>
+          <div class='ct-text'>
+            <br/>
+            Quem casa quer casa (ou casinha para começar)<br/>
+            E nós não somos diferentes<br/>
+            Depois de podermos finalmente casar<br/>
+            Viveremos felizes e contentes<br/>
+            <br/>
+            Ajudem-nos a montar o nosso lar<br/>
+            Onde vos vamos sempre receber<br/>
+            Para escolher basta clickar<br/>
+            Há muito para oferecer<br/>
+            <br/>
+          </div>  
+          <div class='ct-categories'>
+            <div class='row'>
+              <div class='col-xs-12 col-md-6'>
+                <%= link_to pages_casa_path(categoria: 'sala'), class: "ct-category #{'ct-selected' if @category == 'sala'}" do %>
+                  <p>SALA</p>
+                <% end %>
+              </div>
+              <div class='col-xs-12 col-md-6'>
+                <%= link_to pages_casa_path(categoria: 'casa_de_jantar'), class: "ct-category #{'ct-selected' if @category == 'casa_de_jantar'}" do %>
+                  <p>CASA DE JANTAR</p>
+                <% end %>
+              </div>
+              <div class='col-xs-12 col-md-6'>
+                <%= link_to pages_casa_path(categoria: 'cozinha'), class: "ct-category #{'ct-selected' if @category == 'cozinha'}" do %>
+                  <p>COZINHA</p>
+                <% end %>
+              </div>
+              <div class='col-xs-12 col-md-6'>
+                <%= link_to pages_casa_path(categoria: 'quarto'), class: "ct-category #{'ct-selected' if @category == 'quarto'}" do %>
+                  <p>QUARTO</p>
+                <% end %>
+              </div>
+              <div class='col-xs-12 col-md-6'>
+                <%= link_to pages_casa_path(categoria: 'casa_de_banho'), class: "ct-category #{'ct-selected' if @category == 'casa_de_banho'}" do %>
+                  <p>CASA DE BANHO</p>
+                <% end %>
+              </div>
+              <div class='col-xs-12 col-md-6'>
+                <%= link_to pages_casa_path(categoria: 'exterior'), class: "ct-category #{'ct-selected' if @category == 'exterior'}" do %>
+                  <p>EXTERIOR</p>
+                <% end %>
+              </div>
+            </div>
+          </div>  
+        </div>  
+
+        <div class='ct-gifts row'>
+          <% @gifts.each do |gift| %>
+            <% if gift.offered? %> 
+              <div class='col-sm-12 col-md-6'>
+                <div class='ct-card ct-offered'>
+                  <%= image_tag("list/#{gift.code_name}.png", class: 'ct-picture') %>
+                  <div class='ct-info'>
+                    <p>OFERECIDO</p>
+                  </div>
+                </div>
+              </div>
+            <% else %>
+              <div class='col-sm-12 col-md-6'>
+                <%= link_to gift_path(gift.id), class: 'ct-card' do %>
+                  <%= image_tag("list/#{gift.code_name}.png", class: 'ct-picture') %>
+                  <div class='ct-info'>
+                    <p><%= "#{gift.name}  |  #{gift.offered_value.to_i}/#{gift.total_value.to_i} €" %></p>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+

@@ -10,13 +10,20 @@
     <div class='col-xs-12 col-md-6'>
       <div class='ct-info'>
         <p>
-          <span class='ct-subtitle'>A nossa lua de mel</span><br/>
+          Depois do casamento<br/>
+          queremos ir namorar<br/>
+          De manhã de cabelo ao vento<br/>
+          À tarde de papo para o ar<br/>
           <br/>
-          O dia mais aguardado <br/>
-          Está finalmente a chegar<br/>
-          Primeiro veio o noivado<br/>
-          Agora falta casar<br/>
-          <br/><br/>
+          Com o COVID a atrapalhar<br/>
+          Japão e Maldivas têm que esperar<br/>
+          Mas estamos já a preparar<br/>
+          Para quando for possível viajar<br/>
+          <br/>
+          Agora tiramos uma semana<br/>
+          Para juntos irmos descansar<br/>
+          Vamos explorar Portugal<br/>
+          Que tem muito para aproveitar<br/>
         </p>
       </div>
     </div>
@@ -29,7 +36,7 @@
           <%= f.hidden_field :gift_id, value: @gift.id %>
           <div class='ct-buttons'>
             <%= f.button :submit, value: 'CONFIRMAR' %>
-            <%= link_to "VOLTAR", pages_lista_path, class: 'ct-button' %>
+            <%= link_to "VOLTAR", url_for(:back), class: 'ct-button' %>
           </div>
         <% end %>
       </div>

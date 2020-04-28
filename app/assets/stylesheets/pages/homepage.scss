@@ -4,10 +4,14 @@
     margin: auto;
     margin-top: 70px;
     padding-bottom: 30px;
-    p {
+    p,
+    span {
         text-align: center;
         color: #3B5173;
         font-family: 'Raleway', sans-serif;
+    }
+    a {
+        text-decoration: none;
     }
     .ct-picture {
         height: auto;
@@ -15,11 +19,14 @@
         display: block;
         margin: auto;
     }
-    .ct-poem {
+    .ct-text {
         font-weight: 300;
         font-size: larger;
         line-height: 160%;
         letter-spacing: 3px;
+        p {
+            text-align: justify;
+        }
     }
     .ct-subtitle {
         font-weight: 300;
