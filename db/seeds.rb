@@ -37,7 +37,6 @@ gifts_list = [
   { category: 3, code_name: 'mesa_cabeceira',     name: 'Mesas de Cabeceira (2)',  total_value: 160.00,  number_of_tranches: 2,   tranch_value: 80.00,  offered_tranches: 0, offered_value: 0.00, missing_value: 160.00  },
   { category: 3, code_name: 'comoda',             name: 'Cómoda',                  total_value: 250.00,  number_of_tranches: 2,   tranch_value: 125.00, offered_tranches: 0, offered_value: 0.00, missing_value: 250.00  },
   { category: 3, code_name: 'armario',            name: 'Armário',                 total_value: 460.00,  number_of_tranches: 4,   tranch_value: 115.00, offered_tranches: 0, offered_value: 0.00, missing_value: 460.00  },
-  { category: 4, code_name: 'toalheiro',          name: 'Toalheiro',               total_value: 60.00,   number_of_tranches: 1,   tranch_value: 60.00,  offered_tranches: 0, offered_value: 0.00, missing_value: 60.00   },
   { category: 4, code_name: 'toalheiro_eletrico', name: 'Toalheiro elétrico',      total_value: 140.00,  number_of_tranches: 1,   tranch_value: 140.00, offered_tranches: 0, offered_value: 0.00, missing_value: 140.00  },
   { category: 4, code_name: 'cesto_roupa',        name: 'Cesto da roupa',          total_value: 50.00,   number_of_tranches: 1,   tranch_value: 50.00,  offered_tranches: 0, offered_value: 0.00, missing_value: 50.00   },
   { category: 5, code_name: 'mesa_cadeira_fora',  name: 'Mesa e Cadeiras Terraço', total_value: 500.00,  number_of_tranches: 4,   tranch_value: 125.00, offered_tranches: 0, offered_value: 0.00, missing_value: 500.00  },

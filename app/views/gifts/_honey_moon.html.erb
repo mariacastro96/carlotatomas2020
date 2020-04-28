@@ -30,7 +30,7 @@
     <div class='col-xs-12 col-md-6'>
       <div class='ct-form'>
         <%= simple_form_for @transaction, url: gift_transactions_path(@gift.id), method: :post do |f| %>
-          <%= f.input :name, label: 'nome' %>
+          <%= f.input :name, label: 'nome e apelido' %>
           <%= f.input :offered_value, label: 'valor', hint: 'Insira o valor que quer oferecer, em Euros (sem vírgulas ou pontos )' %>
           <%= f.input :message, label: 'mensagem' %>
           <%= f.hidden_field :gift_id, value: @gift.id %>
