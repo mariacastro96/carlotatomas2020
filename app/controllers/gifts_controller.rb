@@ -1,4 +1,5 @@
 class GiftsController < ApplicationController
+  http_basic_authenticate_with name: "presentes", password: "password", only: :index
   def show
     @gift = Gift.find_by(id: params[:id])
     @honey_moon = @gift.honey_moon?
