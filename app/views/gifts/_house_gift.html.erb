@@ -26,7 +26,7 @@
               <% @tranches_left.times do %>
                 <div class='col-xs-3 col-md-4'>
                   <div class='ct-tranche', value='<%= @gift.tranch_value %>'>
-                    <%= @gift.tranch_value %>€
+                    <%= @gift.tranch_value.to_i %>€
                   </div>
                 </div>
               <% end %>

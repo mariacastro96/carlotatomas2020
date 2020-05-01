@@ -14,7 +14,7 @@ gifts_list = [
   { category: 0, code_name: 'tv',                 name: 'Televisão',               total_value: 780.00,  number_of_tranches: 6,   tranch_value: 130.00, offered_tranches: 0, offered_value: 0.00, missing_value: 780.00  },
   { category: 0, code_name: 'mesa_tv',            name: 'Mesa Televisão',          total_value: 460.00,  number_of_tranches: 4,   tranch_value: 115.00, offered_tranches: 0, offered_value: 0.00, missing_value: 460.00  },
   { category: 0, code_name: 'candeeiro_pe',       name: 'Candeeiro de pé',         total_value: 50.00,   number_of_tranches: 1,   tranch_value: 50.00,  offered_tranches: 0, offered_value: 0.00, missing_value: 50.00   },
-  { category: 0, code_name: 'candeeiro_mesa',     name: 'Candeeiro de mesa (2)',   total_value: 20.00,   number_of_tranches: 2,   tranch_value: 60.00,  offered_tranches: 0, offered_value: 0.00, missing_value: 120.00  },
+  { category: 0, code_name: 'candeeiro_mesa',     name: 'Candeeiro de mesa (2)',   total_value: 120.00,  number_of_tranches: 2,   tranch_value: 60.00,  offered_tranches: 0, offered_value: 0.00, missing_value: 120.00  },
   { category: 0, code_name: 'coluna',             name: 'Coluna',                  total_value: 260.00,  number_of_tranches: 2,   tranch_value: 130.00, offered_tranches: 0, offered_value: 0.00, missing_value: 260.00  },
   { category: 0, code_name: 'estante_sala',       name: 'Estante Sala',            total_value: 150.00,  number_of_tranches: 2,   tranch_value: 75.00,  offered_tranches: 0, offered_value: 0.00, missing_value: 150.00  },
   { category: 0, code_name: 'estante_livros',     name: 'Estante Livros',          total_value: 200.00,  number_of_tranches: 2,   tranch_value: 100.00, offered_tranches: 0, offered_value: 0.00, missing_value: 200.00  },
@@ -46,6 +46,7 @@ gifts_list = [
 
 puts 'DELETE...'
 Gift.delete_all
+Transaction.delete_all
 
 gifts_list.each do |gift|
   puts 'Creating gift...'

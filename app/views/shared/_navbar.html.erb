@@ -1,32 +1,15 @@
 <div class='ct-navbar'>
     <div class="ct-button <%= params[:action] == 'casamento' ? 'ct-selected' : 'ct-unselected' %>">
-        <a href='/pages/30-maio'>
-            <p class='ct-big'>30 de MAIO</p>
+        <a href='/30-maio'>
+            <p class='ct-small'>30 de MAIO</p>
         </a>    
     </div>
-    <div class="ct-button <%= params[:action] == 'festa' ? 'ct-selected' : 'ct-unselected' %>">
-        <a href='/pages/festa'>
-            <p class='ct-bigger'>30 de NOVEMBRO - FESTA</p>
-        </a>    
-    </div>
-    
-    <a class='ct-small-button' href="/pages/homepage">
+    <a class='ct-small-button' href="/homepage">
         <%= image_tag('logo.png', class: 'ct-monogram') %>
     </a>
-    <div class="ct-button <%= params[:action] == 'lista' ? 'ct-selected' : 'ct-unselected' %>">
-        <a href='/pages/lista'>
-            <p class='ct-small'>LISTA</p>
-        </a>    
-    </div>
     <div class="ct-button <%= params[:action] == 'nos' ? 'ct-selected' : 'ct-unselected' %>">
-        <a href='/pages/nos'>
-            <p class='ct-big'>SOBRE NÓS</p>
+        <a href='/nos'>
+            <p class='ct-small'>SOBRE NÓS</p>
         </a>    
     </div>
-    
-    <%# <div class="ct-button unselected">
-        <a href="#">
-            <p class="ct-small">RSVP</p>
-        </a>    
-    </div> %>
 </div>

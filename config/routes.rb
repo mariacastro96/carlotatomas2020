@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  get 'pages/homepage', to: 'pages#homepage'
-  get 'pages/festa', to: 'pages#festa'
-  get 'pages/30-maio', to: 'pages#casamento'
-  get 'pages/nos', to: 'pages#nos'
-  get 'pages/lista', to: 'pages#lista'
-  get 'pages/casa', to: 'gifts#casa'
+  get '/homepage', to: 'pages#homepage'
+  # get '/festa', to: 'pages#festa'
+  get '/30-maio', to: 'pages#casamento'
+  get '/nos', to: 'pages#nos'
+  get '/lista', to: 'pages#lista'
+  get '/casa', to: 'gifts#casa'
+  get '/info', to: 'pages#info'
   resources :gifts, only: [:index, :show] do
     resources :transactions, only: [:index,  :create]
   end

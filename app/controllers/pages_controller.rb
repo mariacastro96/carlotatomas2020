@@ -1,10 +1,5 @@
-class PagesController < ApplicationController
-  
-  def countdown
-  end
-  
-  def homepage
-    
+class PagesController < ApplicationController  
+  def homepage 
   end
 
   def festa
@@ -18,5 +13,8 @@ class PagesController < ApplicationController
 
   def lista
     @honey_moon = Gift.find_by(category: 6)
+  end
+
+  def info
   end
 end

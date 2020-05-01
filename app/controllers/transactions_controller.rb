@@ -15,7 +15,7 @@ class TransactionsController < ApplicationController
         gift.update_attributes(offered_value: gift.offered_value + offered_value, offered_tranches: tranches.to_i, missing_value: missing_value)
       end
       TransactionMailer.with(transaction: @transaction).new_transaction.deliver_now
-      redirect_to root_path
+      redirect_to info_path
     else
       redirect_to gift_path(Gift.find(params[:gift_id]).name)
     end

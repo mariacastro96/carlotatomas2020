@@ -64,3 +64,37 @@
         }
     }
 }
+
+.ct-bank {
+    width: 60vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    p {
+        text-align: center;
+        color: #3B5173;
+        font-family: 'Raleway', sans-serif;
+    }
+    .ct-bank-info {
+        margin: 40px 0;
+        width: 100%;
+        border: 1px solid #D8DCE3;
+        border-radius: 4px;
+        padding: 10px 30px;
+        p {
+            font-weight: 300;
+            font-size: medium;
+            line-height: 160%;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+        .ct-bank-accnt {
+            font-weight: 500;
+        }
+    }
+    .row {
+        width: 100%;
+        margin: 0
+    }
+}
