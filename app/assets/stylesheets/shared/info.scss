@@ -63,6 +63,11 @@
             text-align: justify;
         }
     }
+    .ct-link {
+        &:hover {
+            font-weight: 800;
+        }
+    }
 }
 
 .ct-bank {
