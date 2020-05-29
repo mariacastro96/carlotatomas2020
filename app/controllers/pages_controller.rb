@@ -8,6 +8,10 @@ class PagesController < ApplicationController
   def casamento
   end
 
+  def download_missal
+    send_file "app/assets/docs/missal_carlota_tomas_2020.pdf",  type: "application/pdf", x_sendfile: true
+  end
+
   def nos
   end
 

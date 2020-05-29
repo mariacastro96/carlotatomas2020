@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get '/homepage', to: 'pages#homepage'
   # get '/festa', to: 'pages#festa'
   get '/30-maio', to: 'pages#casamento'
+  get '/missal', to: 'pages#download_missal'
   get '/nos', to: 'pages#nos'
   get '/lista', to: 'pages#lista'
   get '/casa', to: 'gifts#casa'

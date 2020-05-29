@@ -3,7 +3,8 @@ class Gift < ApplicationRecord
   has_many :transactions
 
   def offered?
-    self.offered_value == self.total_value
+    return false if self.offered_value.nil? || self.total_value.nil?
+    self.offered_value >= self.total_value
   end
 
   def honey_moon?

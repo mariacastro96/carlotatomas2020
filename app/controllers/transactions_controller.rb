@@ -13,6 +13,8 @@ class TransactionsController < ApplicationController
         missing_value = gift.missing_value - offered_value
         tranches = gift.offered_tranches + (offered_value / gift.tranch_value).to_i
         gift.update_attributes(offered_value: gift.offered_value + offered_value, offered_tranches: tranches.to_i, missing_value: missing_value)
+        offered = gift.offered?
+        gift.update_attributes(offered: offered)
       end
       TransactionMailer.with(transaction: @transaction).new_transaction.deliver_now
       redirect_to info_path
